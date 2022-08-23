@@ -8,7 +8,7 @@ import phone from "../../images/phone-icon.png";
 
 export const Header = () => {
   return (
-    <section className={styles.topwrapper}>
+    <header className={styles.topwrapper}>
       <img src={logo} alt="logo" className={styles.logoimage} />
       <div className={styles.toplinks}>
         <a className={styles.kontaktlinks}>Forside</a>
@@ -26,6 +26,6 @@ export const Header = () => {
         <input type="text" placeholder={"Indtast søgeord"} />
         <BsArrowRightSquare />
       </div>
-    </section>
+    </header>
   );
 };
