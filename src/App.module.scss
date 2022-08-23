@@ -2,11 +2,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300&display=swap');
 
 :root {
-    margin:0;
-    padding:0;
     font-family: 'Ubuntu', sans-serif;
     box-sizing: border-box;
-    --font-size-small: 18pt;
+    --font-size-small: 13pt;
     --white-color:#FFFFFF;
     --pink-color: #D10061;
     --background-color:#131313;
@@ -15,10 +13,12 @@
     --grey-color: #AFAFAF;
     --darkgrey-color:#2C3737;
     --darkergrey-color:#393939;
-
-    
 }
+
 body {
     background-color: var(--background-color);
-    min-height:100vh;
+    height:100%;
+    width:100%;
+    margin: 0;
+    padding: 0;
 }
