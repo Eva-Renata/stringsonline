@@ -1,8 +1,8 @@
 .topwrapper {
-    background-color: var(--background-color) ;
     display:grid;
-    grid-template-columns: 60% 40%;
-    padding:4em;
+    grid-template-columns: 65% 25%;
+    padding:5em 0 3em 0;
+    border-bottom: solid 1px var(--grey-color);
         .logoimage {
             width:100%;
             position: relative;
@@ -11,8 +11,8 @@
             display: flex;
             width:35vw;
             position: absolute;
-            top:12.5%;
-            right:37%;
+            top:15%;
+            right:32.5%;
             a {
                 margin-right:1.5em;
                 color:white;
@@ -38,6 +38,7 @@
         .topright {
             color: white;
             margin: -4.5vh 0 0 2vw;
+            width: 29vw;
             svg {
                 fill: var(--darkgrey-color);
                 background-color: var(--green-color);
@@ -45,21 +46,22 @@
                 width:3em;
                 border-radius: 8px;
                 position: absolute;
-                top: 11%;
-                right: 13%;
+                top: 13.5%;
+                right: 5.5%;
                 border: solid 1px var(--green-color);
             }
             .kontakt {
-                font-size: 10pt;
+                font-size: 11pt;
                 span {
-                    margin: 1em 1.5em 1em 0.2em;
+                    margin: 1em;
                 }
+
             }
             input {
                 padding: 0.5em;
                 margin-top: 1em;
                 border-radius: 4px;
-                width: 21vw;
+                width: 24vw;
                 font-size: 15pt;
                 background-color: #00f9b70e;
                 border:solid 1px var(--green-color);
