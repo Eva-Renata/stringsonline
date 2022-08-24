@@ -12,10 +12,14 @@
         li {
             list-style: none;
             a {
+                text-decoration: none;
                 color: var(--green-color);
                 display: flex;
                 flex-direction: column;
                 font-size: 13pt;
+                &:hover {
+                    color:white;
+                }
                 }
         }
         

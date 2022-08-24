@@ -1,0 +1,6 @@
+  @import "../../mixins.module.scss";
+
+  .notfound {
+      @include main_section_positioned;
+      color: var(--white-color);
+  }

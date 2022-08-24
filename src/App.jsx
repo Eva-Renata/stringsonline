@@ -9,6 +9,19 @@ import { Betingelser } from "./Pages/Salgs- og handelbetingelser/Salgs-og-handel
 import { Login } from "./Pages/Login/Login";
 import { LogOut } from "./Pages/Login/Logout";
 import { useLoginStore } from "./Pages/Login/useLoginStore";
+import NotFound from "./Pages/NotFound/NotFound";
+
+// navlinks array
+const navItems = [
+  { name: "Guitarer", path: "/guitarer" },
+  { name: "Basser", path: "/basser" },
+  { name: "Handmade", path: "/handmade" },
+  { name: "Keyboards", path: "/keyboards" },
+  { name: "Trommer", path: "/trommer" },
+  { name: "Percussion", path: "/percussion" },
+  { name: "Stryg & Blæs", path: "/strygblæs" },
+  { name: "Brands", path: "/brands" },
+];
 
 function App() {
   const { loggedIn } = useLoginStore((store) => ({
@@ -22,6 +35,7 @@ function App() {
         <Menupath />
         <Routes>
           <Route path="/" index element={<Forside />} />
+          <Route path="*" element={<NotFound />}></Route>
           <Route path="/betingelser" index element={<Betingelser />} />
           <Route
             path="/login"
@@ -29,7 +43,7 @@ function App() {
             element={!loggedIn ? <Login /> : <LogOut />}
           />
         </Routes>
-        <NavLeft />
+        <NavLeft navItems={navItems} />
         <Footer />
       </Router>
     </div>

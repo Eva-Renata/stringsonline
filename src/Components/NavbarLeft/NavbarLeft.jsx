@@ -1,19 +1,18 @@
+import { NavLink } from "react-router-dom";
 import styles from "./NavbarLeft.module.scss";
 
-export const NavLeft = () => {
+export const NavLeft = (props) => {
   return (
     <nav className={styles.navigationwrapper}>
       <ul>
-        <li>
-          <a>Guitarer</a>
-          <a>Basser</a>
-          <a>Handmade</a>
-          <a>Keyboards</a>
-          <a>Trommer</a>
-          <a>Percussion</a>
-          <a>Stryg & Blæs</a>
-          <a>Brands</a>
-        </li>
+        {props &&
+          props.navItems.map((value, index) => {
+            return (
+              <li key={index}>
+                <NavLink to={value.path}>{value.name}</NavLink>
+              </li>
+            );
+          })}
       </ul>
     </nav>
   );
