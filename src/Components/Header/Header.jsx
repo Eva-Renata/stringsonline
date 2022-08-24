@@ -5,8 +5,12 @@ import kurv from "../../images/cart-icon.png";
 import mail from "../../images/mail-icon.png";
 import phone from "../../images/phone-icon.png";
 import { NavLink } from "react-router-dom";
+import { useLoginStore } from "../../Pages/Login/useLoginStore";
 
 export const Header = () => {
+  const { loggedIn } = useLoginStore((store) => ({
+    loggedIn: store.loggedIn,
+  }));
   return (
     <header className={styles.topwrapper}>
       {/* logo image with click on goes to homepage */}
@@ -36,6 +40,9 @@ export const Header = () => {
         </div>
         <input type="text" placeholder={"Indtast søgeord"} />
         <BsArrowRightSquare />
+      </div>
+      <div className={styles.logindiv}>
+        {!loggedIn ? "Du er ikke logget ind " : "Du er logget ind "}
       </div>
     </header>
   );

@@ -8,6 +8,8 @@ export const LogOut = () => {
 
   const handleLogOut = () => {
     setLogOut();
+    //fixing the logout error
+    window.location.reload();
   };
   return (
     <section className={styles.logoutwrapper}>
