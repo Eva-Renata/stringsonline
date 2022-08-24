@@ -5,8 +5,8 @@ import { Header } from "./Components/Header/Header";
 import { NavLeft } from "./Components/NavbarLeft/NavbarLeft";
 import { Main } from "./Components/Main/Main";
 import { Menupath } from "./Components/Menupath/Menupath";
-//import { Forside } from "./Pages/Forside/Forside";
-//import { Guitarer } from "./Pages/Guitarer/Guitarer";
+import { Forside } from "./Pages/Forside/Forside";
+import { Betingelser } from "./Pages/Salgs- og handelbetingelser/Salgs-og-handelbetingelser";
 
 function App() {
   return (
@@ -14,12 +14,11 @@ function App() {
       <Router>
         <Header />
         <Menupath />
-        {/* <Routes>
+        <Routes>
           <Route path="/" index element={<Forside />} />
-          <Route path="/guitarer" index element={<Guitarer />} />
-        </Routes> */}
+          <Route path="/betingelser" index element={<Betingelser />} />
+        </Routes>
         <NavLeft />
-        <Main />
         <Footer />
       </Router>
     </div>

@@ -4,6 +4,7 @@
     display:grid;
     grid-template-columns: 65% 25%;
     padding:3em 0 2em 0;
+    //variabler er defineret i :root
     border-bottom: solid 1px var(--grey-color);
         .logoimage {
             width:100%;
@@ -16,6 +17,7 @@
             top:11%;
             right:32.5%;
             a {
+                text-decoration: none;
                 margin-right:1.5em;
                 color:white;
                 cursor:pointer;
@@ -54,7 +56,7 @@
             }
             .kontakt {
                 font-size: 11pt;
-                span {
+                .kontaktspan {
                     margin: 1em;
                 }
 
@@ -65,6 +67,7 @@
                 border-radius: 4px;
                 width: 24vw;
                 font-size: 15pt;
+                //har ikke brugt variabler pga opacity
                 background-color: #00f9b70e;
                 border:solid 1px var(--green-color);
                 color:var(--green-color);

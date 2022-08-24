@@ -4,23 +4,32 @@ import { BsArrowRightSquare } from "react-icons/bs";
 import kurv from "../../images/cart-icon.png";
 import mail from "../../images/mail-icon.png";
 import phone from "../../images/phone-icon.png";
-//import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 export const Header = () => {
   return (
     <header className={styles.topwrapper}>
-      <img src={logo} alt="logo" className={styles.logoimage} />
+      {/* logo image with click on goes to homepage */}
+      <a href={"/"}>
+        <img src={logo} alt="logo" className={styles.logoimage} />
+      </a>
+      {/* toplinks in header */}
       <div className={styles.toplinks}>
-        <a className={styles.kontaktlinks}>Forside</a>
-        <a className={styles.kontaktlinks}>Salgs- og handelsbetingelser</a>
+        <NavLink to={"/"} className={styles.kontaktlinks}>
+          Forside
+        </NavLink>
+        <NavLink to={"/betingelser"} className={styles.kontaktlinks}>
+          Salgs- og handelsbetingelser
+        </NavLink>
         <button className={styles.loginbutton}>Login</button>
       </div>
+      {/* right side of the header */}
       <div className={styles.topright}>
         <div className={styles.kontakt}>
           <img src={mail} alt="mail" />
-          <span>SALES@STRINGSONLINE.COM</span>
+          <span className={styles.kontaktspan}>SALES@STRINGSONLINE.COM</span>
           <img src={phone} alt="phone" />
-          <span>+45 98 12 22 68</span>
+          <span className={styles.kontaktspan}>+45 98 12 22 68</span>
           <img src={kurv} alt="kurv" />
         </div>
         <input type="text" placeholder={"Indtast søgeord"} />

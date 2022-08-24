@@ -1,0 +1,10 @@
+@mixin main_section_positioned {
+    width: 78%;
+    height: 66vh;
+    margin-left: 17%;
+    overflow-y:scroll;
+    //vil ikke se scrollbar
+    &::-webkit-scrollbar {
+        width:0;
+    }
+}
