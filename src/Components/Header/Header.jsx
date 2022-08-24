@@ -21,7 +21,9 @@ export const Header = () => {
         <NavLink to={"/betingelser"} className={styles.kontaktlinks}>
           Salgs- og handelsbetingelser
         </NavLink>
-        <button className={styles.loginbutton}>Login</button>
+        <NavLink to={"/login"}>
+          <button className={styles.loginbutton}>Login</button>
+        </NavLink>
       </div>
       {/* right side of the header */}
       <div className={styles.topright}>

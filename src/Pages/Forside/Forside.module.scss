@@ -1,0 +1,10 @@
+@import "../../mixins.module.scss";
+
+.forsidewrapper {
+    @include main_section_positioned;
+    //overflow: scroll;
+    padding-top:1em;
+    img{
+        width:100%;
+    }
+}

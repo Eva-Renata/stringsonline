@@ -1,0 +1,10 @@
+@import "../../mixins.module.scss";
+
+.logoutwrapper {
+    @include main_section_positioned;
+        button {
+            @include loginbutton;
+            color:black;
+            margin-top:1em;
+        }
+    }

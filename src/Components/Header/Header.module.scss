@@ -1,9 +1,11 @@
+@import "../../mixins.module.scss";
+
 .topwrapper {
     width:90%;
     margin:auto;
     display:grid;
     grid-template-columns: 65% 25%;
-    padding:3em 0 2em 0;
+    padding:3em 0 1em 0;
     //variabler er defineret i :root
     border-bottom: solid 1px var(--grey-color);
         .logoimage {
@@ -29,48 +31,38 @@
                 }
             }
             .loginbutton {
-                background-color: var(--green-color);
-                border-radius: 4px;
-                border:none;
-                height:1.5em;
-                width:5em;
-                color: var(--darkgrey-color);
-                font-size:15pt;
-                font-weight: lighter;
+                @include loginbutton;
             }
         }
         .topright {
             color: white;
-            margin: -4.5vh 0 0 2vw;
+            margin: -3vh 0 0 2vw;
             width: 29vw;
             svg {
                 fill: var(--darkgrey-color);
                 background-color: var(--green-color);
-                height:3em;
-                width:3em;
+                height:2em;
+                width:2em;
                 border-radius: 8px;
                 position: absolute;
-                top: 9%;
-                right: 5.5%;
+                top: 10.5%;
+                right: 7%;
                 border: solid 1px var(--green-color);
+                cursor: pointer;
+                &:hover {
+                        background-color: var(--green-hover-color);
+                    }
             }
             .kontakt {
-                font-size: 11pt;
+                font-size: 10pt;
                 .kontaktspan {
                     margin: 1em;
                 }
 
             }
             input {
-                padding: 0.5em;
-                margin-top: 1em;
-                border-radius: 4px;
                 width: 24vw;
-                font-size: 15pt;
-                //har ikke brugt variabler pga opacity
-                background-color: #00f9b70e;
-                border:solid 1px var(--green-color);
-                color:var(--green-color);
+                @include inputstyle;
                 }
         
         }

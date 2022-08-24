@@ -1,0 +1,26 @@
+@import "../../mixins.module.scss";
+
+.loginwrapper {
+    @include main_section_positioned;
+    color:white;
+    h2 {
+       font-size: 25pt;
+       font-weight: lighter;
+    }
+    form {
+        display: flex;
+        flex-direction: column;
+        width:20vw;
+        input.inputstyle {
+            @include inputstyle;
+        }
+        label {
+            margin-top: 0.5em;
+        }
+        button {
+            @include loginbutton;
+            color:black;
+            margin-top:1em;
+        }
+    }
+}
