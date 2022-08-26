@@ -1,7 +1,7 @@
 @mixin main_section_positioned {
-    width: 78%;
+    width: 77%;
     height: 66vh;
-    margin-left: 17%;
+    margin-left: 18%;
     overflow-y:scroll;
     //vil ikke se scrollbar
     &::-webkit-scrollbar {

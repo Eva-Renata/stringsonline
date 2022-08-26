@@ -5,9 +5,15 @@ import Axios from "axios";
 import API_URL from "./api.URL";
 import authHeader from "./auth.header";
 
+Axios.defaults.headers.common = authHeader();
+
+const get = async (url) => {
+  return await Axios.get(`${API_URL}/`+url)
+}
+
 
 //endpoint - is what you want to get/create/update. artists, songs, or whatever you want.
-const getAll = (endpoint) => {
+const getList = (endpoint) => {
   return Axios.get(`${API_URL}/${endpoint}`, {
     //checks if user is logged in, if neccesary 
     headers: authHeader(),
@@ -66,7 +72,8 @@ const remove = (endpoint, id) => {
 
 //athering all of them so we have to export/import only one
 const appService = {
-  getAll,
+  get,
+  getList,
   getDetails,
   create,
   update,

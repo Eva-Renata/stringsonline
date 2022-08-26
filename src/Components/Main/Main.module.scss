@@ -1,7 +1,0 @@
-@import "../../mixins.module.scss";
-
-.mainwrapper {
-    color: var(--green-color);
-    @include main_section_positioned;
-    //overflow: scroll;
-}

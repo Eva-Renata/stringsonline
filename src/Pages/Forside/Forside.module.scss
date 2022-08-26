@@ -4,7 +4,42 @@
     @include main_section_positioned;
     //overflow: scroll;
     padding-top:1em;
-    img{
-        width:100%;
+    .hero{
+        width:90%;
+        margin:auto;
+        display: block;
+    }
+    .favorith2 {
+        color:var(--grey-color);
+        padding-left:4vw;
+    }
+    figure {
+        color:white;
+        display:flex;
+        align-items: center;
+        border: solid 1px white;
+        figcaption {
+            margin:1em;
+            h2 {
+                margin:0;
+            }
+            span {
+                border: solid 1px white;
+                padding:0.8em;
+                font-size: 10pt;
+            }
+            button {
+                padding:1em;
+                font-size: 10pt;
+                background-color: var(--pink-color);
+                color: white;
+                border-radius: 6px;
+                cursor:pointer;
+            }
+            p.læsmere {
+                color:var(--green-color);
+                margin-top:0;
+            }
+        }
     }
 }

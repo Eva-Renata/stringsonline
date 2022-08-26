@@ -1,0 +1,30 @@
+@import "../../mixins.module.scss";
+
+.elguitarerwrapper {
+    @include main_section_positioned;
+    //overflow: scroll;
+    padding-top: 1em;
+    color:white;
+    text-align: center;
+    .Prwrapper {
+        display: grid;
+        grid-template-columns: auto auto;
+        figure {
+            img {
+                width: 100%;
+                background-color: white;
+            }
+            color: white;
+            align-items: center;
+            border: solid 1px var(--green-color);
+            figcaption {
+                margin: 1em;
+                h2 {
+                    margin: 0;
+                    color: var(--green-color);
+                }
+            }
+        }
+    }
+    
+}

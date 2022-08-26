@@ -7,10 +7,27 @@ import phone from "../../images/phone-icon.png";
 import { NavLink } from "react-router-dom";
 import { useLoginStore } from "../../Pages/Login/useLoginStore";
 
-export const Header = () => {
+export const Header = (props) => {
   const { loggedIn } = useLoginStore((store) => ({
     loggedIn: store.loggedIn,
   }));
+
+  const products = props.products;
+  const search = (value) => {
+    if (!value) {
+      props.setFilteredProducts([]);
+    } else {
+      const filtered = products.filter((product) => {
+        return (
+          // searching (filtering) between names or brands
+          product.name.toLowerCase().includes(value) ||
+          product.brand.toLowerCase().includes(value)
+        );
+      });
+      props.setFilteredProducts(filtered);
+    }
+  };
+
   return (
     <header className={styles.topwrapper}>
       {/* logo image with click on goes to homepage */}
@@ -26,7 +43,10 @@ export const Header = () => {
           Salgs- og handelsbetingelser
         </NavLink>
         <NavLink to={"/login"}>
-          <button className={styles.loginbutton}>Login</button>
+          <button className={styles.loginbutton}>
+            {/* button interface changes */}
+            {!loggedIn ? "Login " : "Log ud "}
+          </button>
         </NavLink>
       </div>
       {/* right side of the header */}
@@ -38,7 +58,13 @@ export const Header = () => {
           <span className={styles.kontaktspan}>+45 98 12 22 68</span>
           <img src={kurv} alt="kurv" />
         </div>
-        <input type="text" placeholder={"Indtast søgeord"} />
+        <input
+          type="text"
+          placeholder={"Indtast søgeord"}
+          onChange={(e) => {
+            search(e.target.value.toLowerCase());
+          }}
+        />
         <BsArrowRightSquare />
       </div>
       <div className={styles.logindiv}>
